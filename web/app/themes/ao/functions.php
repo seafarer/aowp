@@ -186,9 +186,10 @@ require get_template_directory() . '/taxonomies/type.php';
 function allow_cors_headers() {
 	// Make sure you replace 'http://localhost:4321' with your actual Astro dev server URL
 	$allowed_origins = array(
-		'http://localhost:4321',  // Astro dev server
-		'http://localhost:3000',  // Just in case you use a different port
-		'https://aowp.wildroar.dev'  // Your production domain
+		'http://localhost:4321',  
+		'http://localhost:3000',
+		'https://aowp.wildroar.dev',
+		'https://aoastro.vercel.app'
 	);
 
 	if (isset($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins)) {
