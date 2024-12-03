@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e896b2d3233d3f5540009c2f9c46ea9",
+    "content-hash": "56fea6bbe79c60b98163fc835dfe73ef",
     "packages": [
         {
             "name": "composer/installers",
@@ -1140,6 +1140,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/spinupwp/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.8.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-plugin/wp-dummy-content-generator",

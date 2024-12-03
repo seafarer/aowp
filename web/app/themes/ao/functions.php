@@ -7,6 +7,12 @@
  * @package Adventure_Outdoors_Theme
  */
 
+function ao_setup() {
+  add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'ao_setup');
+
 /**
  * Custom Post Types
  */
@@ -20,6 +26,7 @@ require get_template_directory() . '/taxonomies/destination.php';
 require get_template_directory() . '/taxonomies/level.php';
 require get_template_directory() . '/taxonomies/season.php';
 require get_template_directory() . '/taxonomies/type.php';
+require get_template_directory() . '/taxonomies/time.php';
 
 function allow_cors_headers() {
   // Make sure you replace 'http://localhost:4321' with your actual Astro dev server URL
