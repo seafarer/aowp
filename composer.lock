@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edaba758a9ba85d2a57a7241c0169396",
+    "content-hash": "0e896b2d3233d3f5540009c2f9c46ea9",
     "packages": [
         {
             "name": "composer/installers",
@@ -1158,6 +1158,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-dummy-content-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-rest-cache",
+            "version": "2024.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-rest-cache/",
+                "reference": "tags/2024.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-rest-cache.2024.2.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-rest-cache/"
         },
         {
             "name": "wpackagist-theme/twentytwentyfive",
