@@ -43,7 +43,8 @@
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "wpackagist-plugin/wp-dummy-content-generator": "^3.4",
     "wpackagist-plugin/classic-editor": "^1.6",
-    "wpackagist-plugin/instant-images": "^7.0"
+    "wpackagist-plugin/instant-images": "^7.0",
+    "wpackagist-plugin/spinupwp": "^1.7"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

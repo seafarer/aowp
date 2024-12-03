@@ -1,24 +1,35 @@
 <?xml version="1.0"?>
-<ruleset name="Roots">
-  <description>Roots Coding Standards</description>
+<ruleset name="WordPress Coding Standards">
+  <description>Apply WordPress Coding Standards</description>
+  <!-- Set the memory limit to 256M.
+       For most standard PHP configurations, this means the memory limit will temporarily be raised.
+       Ref: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#specifying-phpini-settings
+  -->
+  <ini name="memory_limit" value="256M"/>
 
-  <!-- Scan all files in directory -->
-  <file>.</file>
+  <!--
+  Prevent errors caused by WordPress Coding Standards not supporting PHP 8.0+.
+  See https://github.com/WordPress/WordPress-Coding-Standards/issues/2035
+  -->
+  <ini name="error_reporting" value="E_ALL &#38; ~E_DEPRECATED" />
 
-  <!-- Scan only PHP files -->
+  <!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
+  <arg name="cache"/>
+
+  <!-- Strip the filepaths down to the relevant bit. -->
+  <arg name="basepath" value="./"/>
+
+  <!-- Check up to 20 files simultaneously. -->
+  <arg name="parallel" value="20"/>
+
+  <!-- Show sniff codes in all reports. -->
+  <arg value="ps"/>
+
+  <!-- Only sniff PHP files. -->
   <arg name="extensions" value="php"/>
 
   <!-- Ignore WordPress and Composer dependencies -->
   <exclude-pattern>web/wp</exclude-pattern>
-  <exclude-pattern>web/app/themes/twentytwentyfive/</exclude-pattern>
   <exclude-pattern>vendor/</exclude-pattern>
 
-  <!-- Show colors in console -->
-  <arg value="-colors"/>
-
-  <!-- Show sniff codes in all reports -->
-  <arg value="ns"/>
-
-  <!-- Use PSR-2 as a base -->
-  <rule ref="PSR2"/>
 </ruleset>
