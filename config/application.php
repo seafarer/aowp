@@ -124,6 +124,15 @@ Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 
+Config::define( 'ACF_PRO_LICENSE', env( 'ACF' ) );
+
+// Mailgun Settings
+Config::define( 'MAILGUN_APIKEY', env( 'MAILGUN_APIKEY' ) );
+Config::define( 'MAILGUN_REGION', 'us' );
+Config::define( 'MAILGUN_USEAPI', '1' );
+Config::define( 'MAILGUN_TRACK_CLICKS', 'yes' );
+Config::define( 'MAILGUN_TRACK_OPENS', 'yes' );
+
 /**
  * Debugging Settings
  */
