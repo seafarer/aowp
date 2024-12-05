@@ -8,9 +8,16 @@
  */
 
 function ao_setup() {
+  add_theme_support('align-wide');
   add_theme_support('post-thumbnails');
-}
 
+  add_post_type_support('page', 'excerpt');
+
+  register_nav_menus([
+    'main_menu' => esc_html__('Main Navigation', 'ao'),
+    'footer_menu' => esc_html__('Footer Navigation', 'ao'),
+  ]);
+}
 add_action('after_setup_theme', 'ao_setup');
 
 /**
